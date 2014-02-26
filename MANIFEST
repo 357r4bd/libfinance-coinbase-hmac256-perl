@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Finance-Coinbase-HMAC256.t
+lib/Finance/Coinbase/HMAC256.pm
