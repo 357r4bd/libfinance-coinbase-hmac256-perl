@@ -3,12 +3,13 @@
 use strict;
 use warnings;
 
-use Coinbase ();
+use lib q{../lib};
+use Finance::Coinbase::HMAC256 ();
 
 my $HOME      = ( getpwuid $> )[7];
 my $config    = qq{$HOME/.api-configs/coinbase.conf};
 
-my $cb = Coinbase->new({ config_file => $config });
+my $cb = Finance::Coinbase::HMAC256->new({ config_file => $config });
 
 printf("%s\n",$cb->get('prices','spot_rate'));
 #printf("%s\n",$cb->get___account__balance());
